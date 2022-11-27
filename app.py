@@ -55,13 +55,13 @@ def pull_google_drive(url):
 
 
 def reformat_dfs(d):
-    st.dataframe(d)
+#     st.dataframe(d)
     d = d[d.expiration_date.notnull()]
 
     # reformat date columns
     date_cols = ['expiration_date', 'expiration_date_p']
     for c in date_cols:
-        st.write(c)
+#         st.write(c)
         d[c] = pd.to_datetime(d[c])
 
 
@@ -164,7 +164,7 @@ def sidebar_config(GOOGLE_DRIVE_URL_DICT):
         except ValueError:
             missing_dates.append(pd.to_datetime(day).strftime('%b %d (%a)'))
 
-    st.write(daily_dfs)
+#     st.write(daily_dfs)
 
     if missing_dates != []:
         st.sidebar.write(f"No {company} data pulled for {', '.join(missing_dates)}.<br>", unsafe_allow_html=True)
