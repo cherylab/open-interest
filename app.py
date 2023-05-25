@@ -30,7 +30,7 @@ st.set_page_config(layout='wide')
 GOOD_FRIDAYS = [datetime(2022,4,15), datetime(2023,4,7), datetime(2024,3,29)]
 THURS_BEFORE = [x - timedelta(days=1) for x in GOOD_FRIDAYS]
 
-# dictionary of companys and google drive links
+# dictionary of companys and google drive links 
 GOOGLE_DRIVE_URL_DICT = {
     'AAPL':'https://docs.google.com/spreadsheets/d/1RpshZrtU_nAzhBwiiYv5CTGRQPJgjycs/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true',
     'QQQ':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true'
