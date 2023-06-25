@@ -24,6 +24,7 @@ from multiapp import MultiApp
 import streamlit as st
 import yfinance as yf
 import plot_functions
+import pkg_resources
 
 st.set_page_config(layout='wide')
 
@@ -349,6 +350,11 @@ def animate_page(GOOGLE_DRIVE_URL_DICT):
                                     company,
                                     week,
                                     future_week=future_week_bool)
+
+ st.title('Installed Packages')
+    installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
+    for package in sorted(installed_packages):
+        st.text(f'{package[0]}=={package[1]}')
 
 
 
