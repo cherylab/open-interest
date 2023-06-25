@@ -24,7 +24,7 @@ from multiapp import MultiApp
 import streamlit as st
 import yfinance as yf
 import plot_functions
-import pkg_resources
+# import pkg_resources
 
 st.set_page_config(layout='wide')
 
@@ -307,10 +307,10 @@ def callput_page():
 def animate_page(GOOGLE_DRIVE_URL_DICT):
     st.title('Call & Put Volumes Timelapse')
 
-    st.title('Installed Packages')
-    installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
-    for package in sorted(installed_packages):
-        st.text(f'{package[0]}=={package[1]}')
+    # st.title('Installed Packages')
+    # installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
+    # for package in sorted(installed_packages):
+    #     st.text(f'{package[0]}=={package[1]}')
 
     df, company, week, fridays = sidebar_config(GOOGLE_DRIVE_URL_DICT)
 
