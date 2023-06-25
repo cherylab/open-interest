@@ -307,6 +307,11 @@ def callput_page():
 def animate_page(GOOGLE_DRIVE_URL_DICT):
     st.title('Call & Put Volumes Timelapse')
 
+    st.title('Installed Packages')
+    installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
+    for package in sorted(installed_packages):
+        st.text(f'{package[0]}=={package[1]}')
+
     df, company, week, fridays = sidebar_config(GOOGLE_DRIVE_URL_DICT)
 
     week = datetime.strptime(week, '%b %d, %Y')
@@ -351,10 +356,7 @@ def animate_page(GOOGLE_DRIVE_URL_DICT):
                                     week,
                                     future_week=future_week_bool)
 
- st.title('Installed Packages')
-    installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
-    for package in sorted(installed_packages):
-        st.text(f'{package[0]}=={package[1]}')
+ 
 
 
 
