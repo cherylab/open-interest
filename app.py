@@ -40,7 +40,8 @@ GOOGLE_DRIVE_URL_DICT = {
 #     'QQQ':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true'
 
 # function to get excel file from google drive
-@st.cache_data(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
+@st.cache_data
 def pull_google_drive_excel(url, sheet_name=""):
     file_id = url.split('/')[-2]
     dwn_url = "https://drive.google.com/uc?id=" + file_id
