@@ -34,7 +34,8 @@ THURS_BEFORE = [x - timedelta(days=1) for x in GOOD_FRIDAYS]
 # dictionary of tickers and google drive links 
 GOOGLE_DRIVE_URL_DICT = {
     'AAPL':'https://docs.google.com/spreadsheets/d/1RpshZrtU_nAzhBwiiYv5CTGRQPJgjycs/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true',
-    'QQQ':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true'
+    'QQQ':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true',
+    'NVDA':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=100070234279544657857&rtpof=true&sd=true'
 }
 
 #     'QQQ':'https://docs.google.com/spreadsheets/d/1ezfvowAhV5wRX7tW_QzFfzv6SJDy8-iS/edit?usp=sharing&ouid=109079795382383182623&rtpof=true&sd=true'
