@@ -137,7 +137,7 @@ def calc_dates_this_week():
 
 def sidebar_config(GOOGLE_DRIVE_URL_DICT):
     st.sidebar.write('<br>', unsafe_allow_html=True)
-    company = st.sidebar.selectbox('Ticker', options=['QQQ','AAPL'], index=0)
+    company = st.sidebar.selectbox('Ticker', options=['QQQ','AAPL','NVDA'], index=0)
 
     # return a list of dates that have elapsed since monday to use as sheet names in the google drive imports
     dates, fridays, last_week_monday = calc_dates_this_week()
